@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile",
+      "type": "shell",
+      "command": "javac",
+      "args": [
+        "-cp", "lib/mysql-connector-j.jar",
+        "-d", "out",
+        "src/main/MainApp.java",
+        "src/main/db/DBConnection.java",
+        "src/main/model/Student.java",
+        "src/main/model/Grade.java",
+        "src/main/dao/StudentDAO.java",
+        "src/main/dao/GradeDAO.java",
+        "src/main/gui/Dashboard.java",
+        "src/main/gui/StudentPanel.java",
+        "src/main/gui/GradePanel.java",
+        "src/main/gui/ReportPanel.java"
+      ],
+      "group": "build",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": "$javac"
+    },
+    {
+      "label": "Run",
+      "type": "shell",
+      "command": "java",
+      "args": ["-cp", "out${pathSeparator}lib/mysql-connector-j.jar", "MainApp"],
+      "group": "test",
+      "dependsOn": "Compile"
+    }
+  ]
+}

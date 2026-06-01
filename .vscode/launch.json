@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Student Management System",
+      "request": "launch",
+      "mainClass": "MainApp",
+      "projectName": "StudentManagementSystem",
+      "classPaths": ["${workspaceFolder}/out", "${workspaceFolder}/lib/mysql-connector-j.jar"],
+      "sourcePaths": ["${workspaceFolder}/src/main"]
+    }
+  ]
+}
